@@ -9,13 +9,9 @@ namespace Task_27
         {
             Dictionary<string, string> vocabulary = new Dictionary<string, string>();
 
-            string word;
-
-            bool enterOrExit = true;
-
             AddDefinition(vocabulary);
 
-            InputWord(vocabulary, ref enterOrExit);
+            CheckingWordInDictionary(vocabulary);
         }
 
         private static void AddDefinition(Dictionary<string, string> vocabulary)
@@ -27,9 +23,11 @@ namespace Task_27
             vocabulary.Add("Табурет", "мебельное изделие для сидения одного человека без спинки и подлокотников.");
         }
 
-        private static void InputWord(Dictionary<string, string> vocabulary, ref bool enterOrExit)
+        private static void CheckingWordInDictionary(Dictionary<string, string> vocabulary)
         {
             string word;
+            bool enterOrExit = true;
+
             while (enterOrExit)
             {
                 Console.Write("Введите нужное слово : ");
